@@ -1,0 +1,114 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.container{
+    width:900px;
+}
+
+.header{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.header h1{
+    font-size:42px;
+}
+
+.header p{
+    color:#94a3b8;
+    margin-top:10px;
+}
+
+.card,
+.response-card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    margin-top:15px;
+}
+
+select,
+textarea{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    margin-bottom:15px;
+}
+
+textarea{
+    height:180px;
+    resize:none;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    background:#3b82f6;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#2563eb;
+}
+
+#responseBox{
+    margin-top:10px;
+    line-height:1.8;
+}
+#responseBox {
+    line-height: 1.7;
+    white-space: normal;
+}
+
+#responseBox h1,
+#responseBox h2,
+#responseBox h3 {
+    margin-top: 15px;
+}
+
+#responseBox ul,
+#responseBox ol {
+    padding-left: 25px;
+}
+
+#responseBox table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#responseBox th,
+#responseBox td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#responseBox th {
+    background-color: #f5f5f5;
+}

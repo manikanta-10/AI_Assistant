@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant Pro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>🤖 AI Assistant Pro</h1>
+            <p>Answer Questions • Summarize Text • Generate Content</p>
+        </div>
+
+        <div class="card">
+
+            <label>Select Function</label>
+
+            <select id="function">
+                <option>Answer Questions</option>
+                <option>Summarize Text</option>
+                <option>Generate Creative Content</option>
+            </select>
+
+            <label>Your Prompt</label>
+
+            <textarea
+                id="userInput"
+                placeholder="Type your prompt here..."
+            ></textarea>
+
+            <button onclick="generateResponse()">
+                Generate Response
+            </button>
+
+        </div>
+
+        <div class="response-card">
+
+            <h2>Response</h2>
+
+            <div id="responseBox">
+                AI responses will appear here...
+            </div>
+            <div class="feedback-section">
+                <p>Was this response helpful?</p>
+                <button onclick="sendFeedback('Yes')">
+                            👍 Yes
+                </button>
+                <button onclick="sendFeedback('No')">
+                            👎 No
+                </button>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+</body>
+</html>
