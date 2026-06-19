@@ -10,6 +10,7 @@ from prompts import (
 )
 import os
 
+
 app = Flask(__name__)
 
 load_dotenv()
@@ -77,16 +78,20 @@ def generate():
         "response": response_text
     })
 
+
+
 @app.route("/feedback", methods=["POST"])
 def feedback():
 
     data = request.get_json()
-
     feedback_text = data["feedback"]
 
     current_time = datetime.now().strftime(
         "%Y-%m-%d %H:%M:%S"
     )
+
+    # Create data folder if it doesn't exist
+    os.makedirs("data", exist_ok=True)
 
     with open(
         "data/feedback.txt",
@@ -105,6 +110,8 @@ def feedback():
         file.write(
             "-" * 40 + "\n\n"
         )
+
+    print(f"Feedback saved: {feedback_text}")
 
     return jsonify({
         "status": "success"
